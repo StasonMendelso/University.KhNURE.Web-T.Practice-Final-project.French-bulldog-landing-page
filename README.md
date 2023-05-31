@@ -1,5 +1,7 @@
 # University.KhNURE.Web-T.Practice-Final-project.French-bulldog-landing-page
 
+[![wakatime](https://wakatime.com/badge/user/b33e0124-90c1-44a9-95a8-0f09b324ad70/project/4c90b117-0d4f-46d5-b8cc-56399a43b4fb.svg)](https://wakatime.com/badge/user/b33e0124-90c1-44a9-95a8-0f09b324ad70/project/4c90b117-0d4f-46d5-b8cc-56399a43b4fb)
+
 ## What is the project about?
 
 Repository is for educational purpose - doing final project on the
@@ -15,7 +17,7 @@ design"*.
 
 There isn't a real or PET project, it's project about doing the practical task from discipline in university. So, you
 need
-download the code from the **main** branch for showing the completed task. For this, see the sections below.
+download the code from the **main** branch for showing the completed task or **[click here to see the landing page][8]** on your browser. For this, see the sections below.
 
 ### Prerequisites
 
@@ -89,3 +91,5 @@ Run the project using the [index.html](index.html) file.
 [6]:https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address
 
 [7]:https://docs.github.com/en/authentication/connecting-to-github-with-ssh
+
+[8]:https://stasonmendelso.github.io/University.KhNURE.Web-T.Practice-Final-project.French-bulldog-landing-page/
