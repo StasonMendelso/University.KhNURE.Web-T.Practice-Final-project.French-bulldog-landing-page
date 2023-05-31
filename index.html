@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mochiy+Pop+One|Merriweather|Source+Sans+Pro">
     <link rel="stylesheet" href="assets/css/style.css"/>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="assets/js/accordion.js"></script>
+    <script src="assets/js/sendEmail.js"></script>
     <title>Happy french bulldogs</title>
 </head>
 <body>
@@ -12,7 +15,7 @@
     <div class="content">
         <div class="container">
             <div class="block-1 block">
-                <header class="header__row">
+                <header class="header__row"  id="main">
                     <div class="header__container">
                         <div class="logo__container">
                             <div class="logo">
@@ -24,27 +27,27 @@
                             </div>
                         </div>
                         <div class="navbar">
-                            <a class="navbar__item" href="">
+                            <a class="navbar__item" href="#main">
                                 Головна
                             </a>
-                            <a class="navbar__item" href="">
+                            <a class="navbar__item" href="#about">
                                 Про нас
                             </a>
-                            <a class="navbar__item" href="">
+                            <a class="navbar__item" href="#our-pupils">
                                 Наші вихованці
                             </a>
-                            <a class="navbar__item" href="">
+                            <a class="navbar__item" href="#frequently__questions">
                                 Часті запитання
                             </a>
-                            <a class="navbar__item" href="">
+                            <a class="navbar__item" href="#contacts">
                                 Контакти
                             </a>
-                            <div class="navbar__item telephone__container">
+                            <div class="telephone__container">
                                 <div class="telephone__icon">
                                     <img src="assets/images/phone_icon.png">
                                 </div>
                                 <div class="telephone__number">
-                                    +380 95 247-34-05
+                                    +380 50 556 73 05
                                 </div>
                             </div>
                         </div>
@@ -54,7 +57,7 @@
                 <div class="greeting__row">
                     <div class="greeting__body">
                         <div class="greeting__block">
-                            <div class="greeting__title title">
+                            <div class="greeting__title title" >
                                 Давно мріяли завести французького бульдога?
                             </div>
                             <div class="text greeting__text-container">
@@ -66,7 +69,7 @@
                                 </p>
                             </div>
                             <div class="greeting__btn__container">
-                                <a class="greeting-btn btn" href="">Переглянути вихованців</a>
+                                <a class="greeting-btn btn" id="greeting-btn" href="#our-pupils">Переглянути вихованців</a>
                             </div>
                         </div>
                         <div class="greeting__image">
@@ -78,8 +81,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="about__row">
-                    <div class="about__body">
+                <div class="about__row"  id="about">
+                    <div class="about__body" >
                         <div class="about__image">
                             <div class="about__image-main">
                                 <img src="assets/images/dog-2.png">
@@ -103,20 +106,21 @@
                     </div>
                 </div>
             </div>
-            <div class="block-2 block">
-                <div class="our-pupils__row">
+            <div class="block-2 block" id="our-pupils">
+                <div class="our-pupils__row"  >
                     <div class="our-pupils__body">
-                        <div class="our-pupils__title title">
+                        <div class="our-pupils__title title" >
                             Наші вихованці
                         </div>
                         <div class="our-pupils__image-container">
-                            <div class="image-row">
                                 <div class="image-card">
                                     <div class="image-card__header">
                                         <img src="assets/images/card-dog-1.jpg">
                                     </div>
                                     <div class="image-card__footer">
-                                        <div>Брауні, 6 місяців</div>
+                                        <div class="image-card__footer-inner">
+                                            <div class="image-card__text">Брюс, 3 місяці</div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="image-card">
@@ -124,25 +128,7 @@
                                         <img src="assets/images/card-dog-2.jpg">
                                     </div>
                                     <div class="image-card__footer">
-                                        <div>Брауні, 1,5 місяці</div>
-                                    </div>
-                                </div>
-                                <div class="image-card">
-                                    <div class="image-card__header">
-                                        <img src="assets/images/card-dog-3.jpg">
-                                    </div>
-                                    <div class="image-card__footer">
-                                        <div>Флафун, 6 місяців</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="image-row">
-                                <div class="image-card">
-                                    <div class="image-card__header">
-                                        <img src="assets/images/card-dog-4.jpg">
-                                    </div>
-                                    <div class="image-card__footer">
-                                        <div>Брауні, 6 місяців</div>
+                                        <div class="image-card__text">Брауні, 2 місяці</div>
                                     </div>
                                 </div>
                                 <div class="image-card">
@@ -150,7 +136,23 @@
                                         <img src="assets/images/card-dog-5.jpg">
                                     </div>
                                     <div class="image-card__footer">
-                                        <div>Брауні, 1,5 місяці</div>
+                                        <div class="image-card__text">Вів'єн, 3 місяці</div>
+                                    </div>
+                                </div>
+                                <div class="image-card">
+                                    <div class="image-card__header">
+                                        <img src="assets/images/card-dog-4.jpg">
+                                    </div>
+                                    <div class="image-card__footer">
+                                        <div class="image-card__text">Блек, 1,5 місяці</div>
+                                    </div>
+                                </div>
+                                <div class="image-card">
+                                    <div class="image-card__header">
+                                        <img src="assets/images/card-dog-3.jpg">
+                                    </div>
+                                    <div class="image-card__footer">
+                                        <div class="image-card__text">Флафун, 5 місяці</div>
                                     </div>
                                 </div>
                                 <div class="image-card">
@@ -158,17 +160,15 @@
                                         <img src="assets/images/card-dog-6.jpg">
                                     </div>
                                     <div class="image-card__footer">
-                                        <div>Флафун, 6 місяців</div>
+                                        <div class="image-card__text">Тайра, 2 місяці</div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="image-row">
                                 <div class="image-card">
                                     <div class="image-card__header">
                                         <img src="assets/images/card-dog-7.jpg">
                                     </div>
                                     <div class="image-card__footer">
-                                        <div>Брауні, 6 місяців</div>
+                                        <div class="image-card__text">Ракета, 2 місяці</div>
                                     </div>
                                 </div>
                                 <div class="image-card">
@@ -176,7 +176,7 @@
                                         <img src="assets/images/card-dog-8.jpg">
                                     </div>
                                     <div class="image-card__footer">
-                                        <div>Брауні, 1,5 місяці</div>
+                                        <div class="image-card__text">Лізі, 1,5 місяці</div>
                                     </div>
                                 </div>
                                 <div class="image-card">
@@ -184,10 +184,9 @@
                                         <img src="assets/images/card-dog-9.jpg">
                                     </div>
                                     <div class="image-card__footer">
-                                        <div>Флафун, 6 місяців</div>
+                                        <div class="image-card__text">Боня, 6 місяців</div>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -195,20 +194,72 @@
             <div class="block-3 block">
                 <div class="questions__row">
                     <div class="questions__body">
-                        <div class="frequently__questions">
-                            <div class="questions_title title">
+                        <div class="frequently__questions" id="frequently__questions">
+                            <div class="questions__title title" >
                                 Часті запитання
                             </div>
-                            <div class="questions__accordion">
+                            <div class="questions__accordion one">
                                 <div class="question__item">
                                     <div class="question__text">
                                         Чи схильні французькі бульдоги до підгризання меблів або інших речей?
                                     </div>
-                                    <img src="assets/images/open_icon.png">
                                     <div class="question__answer">
+                                        <p>Французькі бульдоги можуть мати різні пристрасті, що стосуються підгризання речей. Хоча ця порода не відома своїм сильним нагризанням, деякі бульдоги все ж можуть виявляти такі звички. Однак варто зазначити, що індивідуальна особистість собаки, її розвиток і виховання впливають на його поведінку.</p>
 
+                                        <p>Підгризання речей у собак може бути пов'язане з декількома факторами, такими як нудьга, тривога, стрес або недостаток фізичної активності. Французьким бульдогам, як і іншим породам собак, потрібна належна стимуляція, включаючи фізичні вправи і ментальні виклики, аби зайняти їх увагу та запобігти нудьзі.</p>
                                     </div>
-                                    <img src="assets/images/close_icon.png">
+                                </div>
+                                <div class="question__item">
+                                    <div class="question__text">
+                                        Чи є французькі бульдоги вразливими до певних медичних проблем?
+                                    </div>
+                                    <div class="question__answer">
+                                        Французькі бульдоги відомі своєю схильністю до певних медичних проблем, які пов'язані з їхньою специфічною анатомією та генетичними особливостями. Однією з найпоширеніших проблем є проблеми з диханням. Французькі бульдоги мають коротку морду та знижений кістковий розвиток гортані, що може призводити до затрудненого дихання. Вони часто стикаються з проблемами, такими як хрипиця, хрипотіння, сноріння та підвищена втомлюваність під час фізичних навантажень або в спекотну погоду. Завдяки цим анатомічним особливостям, французьким бульдогам необхідно уникати перегрівання та занадто виснажливих фізичних навантажень.
+                                    </div>
+                                </div>
+                                <div class="question__item">
+                                    <div class="question__text">
+                                        Чи потребує французький бульдог особливого догляду шерсті?
+                                    </div>
+                                    <div class="question__answer">
+                                        <p>Так, французькі бульдоги потребують певного догляду шерсті. У них є коротка шерсть, але вона може потребувати регулярного чесання для позбавлення від шерсті, яка випала, і збереження загального здоров'я шкіри.</p>
+
+                                        <p>Крім того, французькі бульдоги мають склонність до збільшеної випродукції шкірного сала, що може призводити до запаху і шкірних проблем. Тому регулярне миття бульдога важливо для збереження чистоти і здоров'я його шкіри.</p>
+
+                                        <p>Також варто звернути увагу на очі, складки на шкірі і вуха. Очі бульдога потребують регулярного очищення від слизу і бруду, а складки на шкірі потребують пильного догляду, оскільки вони можуть стати місцем збору бруду і бактерій. Вуха також потребують регулярного очищення, оскільки вони можуть бути схильні до запалень і інфекцій.</p>
+
+                                        <p>Загалом, французькі бульдоги не потребують інтенсивного догляду шерсті, але регулярне чесання, миття та очищення є важливими процедурами для збереження здоров'я і чистоти шкіри та шерсті вашого песика.</p>
+                                    </div>
+                                </div>
+                                <div class="question__item">
+                                    <div class="question__text">
+                                        Чи потребують французькі бульдоги спеціального харчування чи дієти?
+                                    </div>
+                                    <div class="question__answer">
+                                        <p>Так, французькі бульдоги можуть вимагати спеціального харчування чи дієти залежно від їхнього стану здоров'я і особливостей.</p>
+
+                                        <p>Однією з найпоширеніших проблем у французьких бульдогів є шлунково-кишкові проблеми, такі як чутливість, алергії або проблеми зі шлунком. У таких випадках, ваш ветеринар може рекомендувати спеціальну дієту, яка відповідає потребам вашого собаки. Це може включати харчування з обмеженим вмістом алергенних продуктів, дієти з низьким вмістом зернових або інші спеціалізовані формули харчування.</p>
+
+                                        <p>Також слід звернути увагу на управління вагою французького бульдога. Вони мають схильність до набирання зайвої ваги, що може впливати на їхнє здоров'я, особливо на стан суглобів. Раціон харчування має бути збалансованим і відповідати дієтетичним потребам собаки.</p>
+
+                                        <p>Рекомендації щодо харчування французького бульдога також можуть залежати від його віку, рівня активності, статі та інших факторів. Важливо проконсультуватися з ветеринаром, який зможе розробити оптимальну дієту для вашого собаки, враховуючи його конкретні потреби та умови.</p>
+
+                                        <p>Загалом, харчування французького бульдога повинно бути збалансованим, якісним і відповідати його індивідуальним потребам.</p>
+                                    </div>
+                                </div>
+                                <div class="question__item">
+                                    <div class="question__text">
+                                        Чи добре французькі бульдоги ладнають з дітьми та іншими домашніми тваринами?
+                                    </div>
+                                    <div class="question__answer">
+                                        <p>Французькі бульдоги, в цілому, мають тенденцію до дружнього ставлення до дітей і можуть бути чудовими компаньйонами для них. Вони зазвичай є лагідними, терплячими і готовими до гри з дітьми. Однак, як і з будь-якими собаками, важливо навчити дітей правильно поводитися з собакою та нагадувати їм про безпеку.</p>
+
+                                        <p>Французькі бульдоги також можуть бути дружніми до інших домашніх тварин, але це може залежати від індивідуального характеру собаки. Вони часто мають тенденцію до соціалізації з іншими собаками та тваринами, якщо їх правильно вводити із раннього віку і надавати можливість взаємодіяти та підготувати їх до спільного проживання.</p>
+
+                                        <p>Необхідно зазначити, що кожна собака є індивідуальною, і можуть бути варіації в їхньому характері та поведінці. Деякі французькі бульдоги можуть бути більш схильними до агресії або не терплять інших тварин, тому важливо забезпечити належну соціалізацію та навчання з молодого віку.</p>
+
+                                        <p>Як завжди, рекомендується проводити контрольовані зустрічі між французьким бульдогом і дітьми або іншими тваринами. Важливо створити безпечне середовище та наглядати за взаємодією, особливо на початкових етапах.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -217,27 +268,26 @@
                                 Напишіть нам
                             </div>
                             <div class="form">
-                                <form class="contact__us-form">
+                                <form action="" class="contact__us-form" id="form">
                                     <div class="first__row-form">
                                         <div class="input__item">
                                             <div class="input__item-icon">
-                                                <img src="">
+                                                <img src="assets/images/letter_icon.png">
                                             </div>
-                                            <input type="text" placeholder="Введіть e-mail" class="input__item-input" name="email">
+                                            <input type="text" placeholder="Введіть e-mail" class="input__item-input _req _email" name="email">
                                         </div>
                                         <div class="input__item">
                                             <div class="input__item-icon">
-                                                <img src="">
+                                                <img src="assets/images/phone_icon.png">
                                             </div>
-                                            <input type="text" placeholder="Введіть номер телефону" class="input__item-input" name="telephone">
+                                            <input type="text" placeholder="Введіть номер телефону" class="input__item-input _req _telephone" name="telephone">
                                         </div>
                                     </div>
                                     <div class="second__row-form">
-                                        <textarea placeholder="Введіть повідомлення" class="input__item-textarea">
-
-                                        </textarea>
+                                        <textarea placeholder="Введіть повідомлення" class="input__item-textarea _req _message" name="message"></textarea>
                                     </div>
-                                    <button type="submit" class="btn">Відправити повідомлення</button>
+                                    <button type="submit" class="contact__us-btn btn">Відправити повідомлення</button>
+                                    <div class="status"></div>
                                 </form>
                             </div>
                        </div>
@@ -247,57 +297,61 @@
         </div>
     </div>
     <footer class="footer">
-        <div class="container">
-            <div class="block-4 block">
-                <div class="contact__row">
-                    <div class="contact__body">
-                        <div class="contact__column">
-                            <div class="contact__title title">
-                                Контакти
+        <div class="content">
+                <div class="block-4 block">
+                    <div class="contact__row"  id="contacts">
+                        <div class="contact__body">
+                            <div class="contact__column">
+                                <div class="contact__title title">
+                                    Контакти
+                                </div>
+                                <div class="contact__items">
+                                    <div class="contact__item">
+                                        <div class="contact__icon">
+                                            <img src="assets/images/phone_icon.png">
+                                        </div>
+                                        <div class="contact__text">
+                                            +380 50 556 73 05
+                                        </div>
+                                    </div>
+                                    <div class="contact__item">
+                                        <div class="contact__icon">
+                                            <img src="assets/svg/point-location_icon.png">
+                                        </div>
+                                        <div class="contact__text">
+                                            м. Кобеляки, Полтавська область, 39200
+                                        </div>
+                                    </div>
+                                    <div class="contact__item">
+                                        <div class="contact__icon">
+                                            <img src="assets/svg/instagram_icon.png">
+                                        </div>
+                                        <div class="contact__text">
+                                            @<a href="https://instagram.com/valeriaglova?igshid=ZDc4ODBmNjlmNQ==" target="_blank">valeriaglova</a>
+                                        </div>
+                                    </div>
+                                    <div class="contact__item">
+                                        <div class="contact__icon">
+                                            <img src="assets/svg/tik-tok_icon.png">
+                                        </div>
+                                        <div class="contact__text">
+                                            @<a href="https://www.tiktok.com/@valeria.hlova?_t=8cj9WHDVrb3&_r=1" target="_blank">valeria.hlova</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="contact__items">
-                                <div class="contact__item">
-                                    <div class="contact__icon">
-                                        <img src="assets/images/phone_icon.png">
-                                    </div>
-                                    <div class="contact__text">
-                                        +380 95 247-34-05
-                                    </div>
-                                </div>
-                                <div class="contact__item">
-                                    <div class="contact__icon">
-                                        <img src="assets/svg/point-location_icon.svg">
-                                    </div>
-                                    <div class="contact__text">
-                                        м. Кобеляки, Полтавська область, 39200
-                                    </div>
-                                </div>
-                                <div class="contact__item">
-                                    <div class="contact__icon">
-                                        <img src="assets/svg/instagram_icon.svg">
-                                    </div>
-                                    <div class="contact__text">
-                                        @valeriaglova
-                                    </div>
-                                </div>
-                                <div class="contact__item">
-                                    <div class="contact__icon">
-                                        <img src="assets/svg/tik-tok_icon.svg">
-                                    </div>
-                                    <div class="contact__text">
-                                        @valeria.hlova
-                                    </div>
-                                </div>
+                            <div class="contact__map">
+                                <img src="assets/images/contact_map.png">
                             </div>
                         </div>
-                        <div class="contact__map">
-                            <img src="assets/images/contact_map.png">
+                        <div class="copyright">
+                            Copyright @2023 <a href="https://github.com/StasonMendelso">Stanislav Hlova</a>. All rights reserved.
                         </div>
                     </div>
                 </div>
-            </div>
 
         </div>
+
     </footer>
 </div>
 </body>
